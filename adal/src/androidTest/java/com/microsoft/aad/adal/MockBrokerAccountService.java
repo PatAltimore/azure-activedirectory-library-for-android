@@ -86,7 +86,6 @@ public class MockBrokerAccountService extends Service {
             return Mockito.mock(Intent.class);
         }
 
-
         @Override
         public void removeAccounts() throws RemoteException {
             return;

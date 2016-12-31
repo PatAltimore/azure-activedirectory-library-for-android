@@ -60,7 +60,7 @@ public final class BrokerAccountServiceTest extends ServiceTestCase<MockBrokerAc
     private static ExecutorService sThreadExecutor = Executors.newSingleThreadExecutor();
     private static final String VALID_AUTHORITY = "https://login.microsoftonline.com";
 
-    private IBinder mIBiner;
+    private IBinder mIBinder;
     public BrokerAccountServiceTest() {
         super(MockBrokerAccountService.class);
     }
@@ -71,7 +71,7 @@ public final class BrokerAccountServiceTest extends ServiceTestCase<MockBrokerAc
         getContext().getCacheDir();
         System.setProperty("dexmaker.dexcache", getContext().getCacheDir().getPath());
 
-        mIBiner = bindService(new Intent(mContext, MockBrokerAccountService.class));
+        mIBinder = bindService(new Intent(mContext, MockBrokerAccountService.class));
     }
 
     @Override
@@ -297,7 +297,7 @@ public final class BrokerAccountServiceTest extends ServiceTestCase<MockBrokerAc
 
         @Override
         public boolean bindService(Intent service, ServiceConnection conn, int flags) {
-            conn.onServiceConnected(new ComponentName(mContext.getPackageName(), "test"), mIBiner);
+            conn.onServiceConnected(new ComponentName(mContext.getPackageName(), "test"), mIBinder);
             return true;
         }
 

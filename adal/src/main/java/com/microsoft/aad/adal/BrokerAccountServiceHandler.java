@@ -346,7 +346,7 @@ final class BrokerAccountServiceHandler {
         }
 
         public void unBindService(final Context context) {
-            // Service disconnect is asyn operation, in case of race condition, having the service binding check queued up
+            // Service disconnect is async operation, in case of race condition, having the service binding check queued up
             // in main message looper and unbind it.
             final Handler handler = new Handler(Looper.getMainLooper());
             handler.post(new Runnable() {
