@@ -8,7 +8,7 @@ A Work Account is an identity you use to get work done no matter if at your busi
 ## ADAL for Android 1.12 Released!
 
 ## Versions
-Current version - 1.12.0
+Current version - 1.12.0-beta
 Minimum recommended version - 1.1.16  
 You can find the changes for each version in the [change log](https://github.com/AzureAD/azure-activedirectory-library-for-android/blob/master/changelog.txt).
 
